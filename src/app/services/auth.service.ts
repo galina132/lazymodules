@@ -16,17 +16,19 @@ export class AuthService {
   currentLoginState = this.loginSubjectSource.asObservable();
   userUrl = environment.userUrl;
 
-  public login(userInfo: User) {
+ /* public login(userInfo: User) {
     console.log(userInfo);
     localStorage.setItem('ACCESS_TOKEN', 'access_token');
-  }
+  }*/
 
   public isLoggedIn() {
     return localStorage.getItem('ACCESS_TOKEN') !== null;
 
   }
 
-  public loginUser(login: string, password: string) {
+  public login(userInfo: User) {
+    const login = userInfo.login;
+    const password = userInfo.password;
     const headers = new HttpHeaders()
       .set(
         login, login

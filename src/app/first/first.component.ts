@@ -34,6 +34,5 @@ export class FirstComponent implements OnInit {
       return;
     }
     this.authService.login(this.loginForm.value);
-    this.router.navigateByUrl('/admin');
   }
 }

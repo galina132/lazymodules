@@ -12,19 +12,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) {
   }
-  private loginSubjectSource = new BehaviorSubject( false);
+
+  private loginSubjectSource = new BehaviorSubject(false);
   currentLoginState = this.loginSubjectSource.asObservable();
   userUrl = environment.userUrl;
-
- /* public login(userInfo: User) {
-    console.log(userInfo);
-    localStorage.setItem('ACCESS_TOKEN', 'access_token');
-  }*/
-
-  public isLoggedIn() {
-    return localStorage.getItem('ACCESS_TOKEN') !== null;
-
-  }
 
   public login(userInfo: User) {
     const login = userInfo.login;

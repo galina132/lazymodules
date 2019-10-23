@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lazytest2';
+  links = ['lazyfirst', 'lazysecond'];
 }

@@ -1,5 +1,4 @@
 <router-outlet></router-outlet>
-<ul>
-  <li><a routerLink="lazyfirst">lazyfirst</a></li>
-  <li><a routerLink="lazysecond">lazysecond</a></li>
-</ul>
+<button *ngFor="let link of links" [routerLink]="link" class="links">
+  {{link}}
+</button>
